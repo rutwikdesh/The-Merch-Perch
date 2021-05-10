@@ -68,6 +68,7 @@ padding-right: 0;
                             <img src='/media/{{i.image}}' class="card-img-top" alt="{{i.product_name}}">
                             <div class="card-body">
                                 <h5 class="card-title" style="height: 40px;width: 270px;font-size: large;">{{i.product_name}}</h5>
+                                <!-- <p class="card-text" style="font-size: large;">{{i.desc|slice:"0:50"}}...</p> -->
                                 <b><p class="card-text" style="font-size: large;">₹{{i.price}}</p></b>
                                 <button id="pr{{i.id}}" class="btn btn-primary cart">Add to Cart</button>
                                 <a href="products/{{i.id}}"><button id="pr{{i.id}}" class="btn btn-success cart">Quick view</button></a>
