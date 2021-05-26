@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-52ij#1m9*^te%eltuqx3c0d*y&#nuhq1-9db_q6x!8*ie=o@9-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://the-merch-perch.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://mysitemerch.herokuapp.com/']
 
 
 # Application definition
