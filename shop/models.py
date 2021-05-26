@@ -24,7 +24,7 @@ class Contact(models.Model):
     def __str__(self) -> str:
         return self.name
 
-class Orders(models.Model):
+class Order(models.Model):
     order_id = models.AutoField(primary_key=True)
     items_json = models.CharField(max_length=4000)
     name = models.CharField(max_length=70)

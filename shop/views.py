@@ -1,5 +1,5 @@
 from django.db.models.base import ModelStateFieldsCacheDescriptor
-from shop.models import Product, Contact, Orders
+from shop.models import Product, Contact, Order
 from django.shortcuts import render
 from django.http import HttpResponse
 import math
@@ -62,7 +62,7 @@ def checkout(request):
         zip_code=request.POST.get('zip_code', '')
         phone=request.POST.get('phone', '')
 
-        order = Orders(items_json= items_json, name=name, email=email, address= address, city=city, state=state, zip_code=zip_code, phone=phone)
+        order = Order(items_json= items_json, name=name, email=email, address= address, city=city, state=state, zip_code=zip_code, phone=phone)
         order.save()
         thank=True
         id=order.order_id
