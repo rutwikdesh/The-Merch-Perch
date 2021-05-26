@@ -31,4 +31,9 @@ class Orders(models.Model):
     email = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=100)
+    state=models.CharField(max_length=111, default="")
     city = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100, default="")
+
+    def __str__(self) -> str:
+        return self.name

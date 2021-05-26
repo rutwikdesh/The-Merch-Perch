@@ -1,5 +1,5 @@
 from django.db.models.base import ModelStateFieldsCacheDescriptor
-from shop.models import Product, Contact
+from shop.models import Product, Contact, Orders
 from django.shortcuts import render
 from django.http import HttpResponse
 import math
