@@ -1,1 +1,1 @@
-web: gunicorn the-merch-perch.wsgi
+web: gunicorn mysite.wsgi --log-file -
