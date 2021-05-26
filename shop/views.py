@@ -38,10 +38,6 @@ def contact(request):
     return render(request, 'shop/contact.html')
 
 
-def tracker(request):
-    return render(request, 'shop/tracker.html')
-
-
 def search(request):
     return render(request, '')
 
