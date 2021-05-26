@@ -52,4 +52,4 @@ def productview(request, id):
 
 
 def checkout(request):
-    return render(request, '')
+    return render(request, 'shop/checkout.html')

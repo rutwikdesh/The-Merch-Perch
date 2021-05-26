@@ -60,37 +60,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <!-- <script>
-        if (localStorage.getItem('cart') == null) {
-            var cart = {};
-        }
-        else {
-            cart = JSON.parse(localStorage.getItem('cart'));
-            document.getElementById('cart').innerHTML = Object.keys(cart).length;
-            updateCart(cart);
-        }
-        function updateCart(cart) {
-            for (var item in cart) {
-                document.getElementById('div' + item).innerHTML = "<button id='minus" + item + "' class='btn btn-primary minus'>-</button> <span id='val" + item + "''>" + cart[item] + "</span> <button id='plus" + item + "' class='btn btn-primary plus'> + </button>";
-            }
-            localStorage.setItem('cart', JSON.stringify(cart));
-            document.getElementById('cart').innerHTML = Object.keys(cart).length;
-            console.log(cart);
-            updatePopover(cart);
-        }
-
-        $('.cart').click(function () {
-            var idstr = this.id.toString();
-            if (cart[idstr] != undefined) {
-                cart[idstr] += 1;
-            }
-            else {
-                cart[idstr] = 1;
-            }
-            localStorage.setItem('cart', JSON.stringify(cart));
-            document.getElementById('cart').innerHTML = Object.keys(cart).length;
-        });
-    </script> -->
     {% block body %} {% endblock %}
     {% block js %} {% endblock %}
 </body>
