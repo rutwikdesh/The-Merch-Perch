@@ -5,19 +5,21 @@
 {% block body %}
 
 <div class="container my-4">
+    {% load humanize %}
     <div class="row">
         <div class="col-md-4">
             <div class="row">
-                <img src="/media//{{product.image}}" width="233px" height="300px">
+                <img src="/media//{{product.image}}" width="300px" height="300px">
             </div>
-            <div class="row my-3">
+            <div class="row my-3 mx-3">
                 <button class="btn btn-primary mx-2"> Buy Now</button>
                 <button class="btn btn-success mx-2 "> Add To Cart</button>
             </div>
         </div>
         
         <div class="col-md-8">
-            <h5>{{product.product_name}}</h5>
+            <h2>{{product.product_name}}</h2>
+            <b><h3>₹{{product.price|intcomma}}</h3></b>
             <p>{{product.desc}}</p>
         </div>
     </div>
