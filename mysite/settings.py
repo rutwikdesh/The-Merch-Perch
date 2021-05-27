@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-52ij#1m9*^te%eltuqx3c0d*y&#nuhq1-9db_q6x!8*ie=o@9-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["mysitemerch.herokuapp.com","127.0.0.1"]
+ALLOWED_HOSTS = ["mysitemerch.herokuapp.com","127.0.0.1","localhost"]
 
 
 # Application definition
@@ -58,7 +58,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['mysite/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

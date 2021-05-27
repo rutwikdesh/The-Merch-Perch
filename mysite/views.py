@@ -3,9 +3,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
 def index(request):
-    params = {'name':'rd', 'place':'mars'}
-    return HttpResponse('hey!')
+    return render(request, 'index.html')
+
 
 def about(request):
     return HttpResponse('hey!')
