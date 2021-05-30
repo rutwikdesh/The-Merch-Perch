@@ -3,6 +3,7 @@ from shop.models import Product, Contact, Order, OrderUpdate
 from django.shortcuts import render
 from django.http import HttpResponse
 import math
+import json
 
 
 def index(request):
@@ -12,7 +13,7 @@ def index(request):
     for cat in cats:
         prod = Product.objects.filter(category=cat)
         n = len(prod)
-        nSlides = n//4 + math.ceil(n/4 - n//4)
+        nSlides = math.ceil(n/4)
         allProds.append([prod, range(1, nSlides), nSlides])
 
     params = {'allProds': allProds}
@@ -67,6 +68,22 @@ def checkout(request):
     return render(request, 'shop/checkout.html')
 
 def tracker(request):
-    
+    if request.method=="POST":
+        orderId = request.POST.get('orderId', '')
+        email = request.POST.get('email', '')
+        try:
+            order = Order.objects.filter(order_id=orderId, email=email)
+            if len(order)>0:
+                update = OrderUpdate.objects.filter(order_id=orderId)
+                updates = []
+                for item in update:
+                    updates.append({'text': item.update_desc, 'time': item.timestamp})
+                    response = json.dumps(updates, default=str)
+                return HttpResponse(response)
+            else:
+                return HttpResponse('{}')
+        except Exception as e:
+            return HttpResponse('{}')
+
     return render(request, 'shop/tracker.html')
 
