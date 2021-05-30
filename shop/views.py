@@ -1,5 +1,5 @@
 from django.db.models.base import ModelStateFieldsCacheDescriptor
-from shop.models import Product, Contact, Order
+from shop.models import Product, Contact, Order, OrderUpdate
 from django.shortcuts import render
 from django.http import HttpResponse
 import math
@@ -41,7 +41,6 @@ def contact(request):
 def search(request):
     return render(request, '')
 
-
 def productview(request, id):
     product = Product.objects.filter(id=id)
     return render(request, 'shop/productview.html', {'product': product[0]})
@@ -60,7 +59,14 @@ def checkout(request):
 
         order = Order(items_json= items_json, name=name, email=email, address= address, city=city, state=state, zip_code=zip_code, phone=phone)
         order.save()
+        update = OrderUpdate(order_id =  order.order_id, update_desc="Your Order has been placed!")
+        update.save()
         thank=True
         id=order.order_id
         return render(request, 'shop/checkout.html', {'thank':thank, 'id':id})
     return render(request, 'shop/checkout.html')
+
+def tracker(request):
+    
+    return render(request, 'shop/tracker.html')
+
