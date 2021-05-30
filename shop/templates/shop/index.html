@@ -107,6 +107,17 @@
 {% endfor %}
 {% endblock %}
 
+{% block cart %}
+<form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
+<button id="popcart" type="button" class="btn btn-secondary mx-2" data-html="true" data-container="body"
+    data-toggle="popover" data-placement="bottom">
+    Cart(<span id="cart">0</span>)
+</button>
+{% endblock %}
+
 {% block js %}
 <script>
     // Find out the cart items from localStorage
