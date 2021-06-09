@@ -5,8 +5,8 @@ This E-Commerce Website has uses data base to store every one of the things in t
 This framework has an administrator and the administrator can oversee client, oversee item, oversee classes and oversee clients request.
 
 A quick overview of the stack used:
-FrameWordk : Django
-Database Used: SqLite
+FrameWordk : Django | 
+Database Used: SqLite | 
 Hosted On: Heroku
 
 Checkout the website here: https://mysitemerch.herokuapp.com/
