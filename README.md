@@ -5,7 +5,7 @@ This E-Commerce Website has uses data base to store every one of the things in t
 This framework has an administrator and the administrator can oversee client, oversee item, oversee classes and oversee clients request.
 
 A quick overview of the stack used:
-Frame Work : Django | 
+Framework : Django | 
 Database Used: MySQL | 
 Hosted On: Heroku
 
