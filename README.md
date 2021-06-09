@@ -6,7 +6,7 @@ This framework has an administrator and the administrator can oversee client, ov
 
 A quick overview of the stack used:
 FrameWordk : Django | 
-Database Used: SqLite | 
+Database Used: MySQL | 
 Hosted On: Heroku
 
 Checkout the website here: https://mysitemerch.herokuapp.com/
