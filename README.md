@@ -1,6 +1,6 @@
 # The-Merch-Perch
 
-The Merch Perch is an amazing Shopping Website where customer can buy every one of the things and play out a checkout for their request.
+The Merch Perch is an amazing Shopping Website where customer can buy every one of the things and pay out a checkout for their request.
 This E-Commerce Website has uses data base to store every one of the things in the information base.
 This framework has an administrator and the administrator can oversee client, oversee item, oversee classes and oversee clients request.
 
