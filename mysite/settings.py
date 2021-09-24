@@ -85,13 +85,24 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'WVxtXV60zm',
+#         'USER': 'WVxtXV60zm',
+#         'PASSWORD': 'P2I6nOnZK1',
+#         'HOST':'remotemysql.com',
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
-    'default': {
+    'default' : {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'WVxtXV60zm',
-        'USER': 'WVxtXV60zm',
-        'PASSWORD': 'P2I6nOnZK1',
-        'HOST':'remotemysql.com',
+        'NAME': 'merchp',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST':'localhost',
         'PORT': '3306',
     }
 }
